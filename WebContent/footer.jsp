@@ -9,7 +9,7 @@
 <body>
 
 <hr>
-<p>stopka informacyjna</p>
+<p>&copy; by Mateusz Meisner</p>
 
 </body>
 </html>
