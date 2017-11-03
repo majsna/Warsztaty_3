@@ -23,7 +23,6 @@ public class AdminExercise extends HttpServlet {
 		List<Exercise> exercises = ExerciseDao.loadAll();
 		request.setAttribute("exercises", exercises);
         getServletContext().getRequestDispatcher("/adminExercise.jsp").forward(request, response);
-
 		
 	}
 

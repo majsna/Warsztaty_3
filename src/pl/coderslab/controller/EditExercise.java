@@ -23,7 +23,6 @@ public class EditExercise extends HttpServlet {
 		int exId = Integer.parseInt(request.getParameter("exId"));
 		request.setAttribute("exId", exId);
 		getServletContext().getRequestDispatcher("/formEditExercise.jsp").forward(request, response);
-
 		
 	}
 

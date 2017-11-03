@@ -29,11 +29,6 @@ public class ShowSolution extends HttpServlet {
 		request.setAttribute("solutions", solutions); 
         getServletContext().getRequestDispatcher("/solutionDetails.jsp").forward(request, response);
 	}
-
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		doGet(request, response);
-	}
 
 }

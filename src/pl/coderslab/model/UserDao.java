@@ -20,7 +20,8 @@ public class UserDao {
 				ResultSet rs = st.executeQuery();
 				while(rs.next()) {
 					User tmpUser = new User(rs.getString(3),rs.getString(2),rs.getString(4),rs.getInt(5));
-					tmpUser.setId(rs.getInt(1));//TODO rozwiązac problem z podwójnym szyfrowaniem hasła
+					tmpUser.setId(rs.getInt(1));
+					tmpUser.password = rs.getString(4);
 					users.add(tmpUser);
 				}
 								
@@ -45,7 +46,8 @@ public class UserDao {
 				ResultSet rs = st.executeQuery();
 				while(rs.next()) {
 					User tmpUser = new User(rs.getString(3),rs.getString(2),rs.getString(4),rs.getInt(5));
-					tmpUser.setId(rs.getInt(1));//TODO rozwiązac problem z podwójnym szyfrowaniem hasła
+					tmpUser.setId(rs.getInt(1));
+					tmpUser.password = rs.getString(4);
 					users.add(tmpUser);
 				}
 								
@@ -70,7 +72,8 @@ public class UserDao {
 				ResultSet rs = st.executeQuery();
 				if(rs.next()) {
 					user = new User(rs.getString(3),rs.getString(2),rs.getString(4),rs.getInt(5));
-					user.setId(rs.getInt(1));//TODO rozwiązac problem z podwójnym szyfrowaniem hasła
+					user.setId(rs.getInt(1));
+					user.password = rs.getString(4);
 				}
 								
 			}catch (Exception e) {
